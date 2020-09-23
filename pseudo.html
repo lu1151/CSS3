@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?7t5hxq');
+            src: url('fonts/icomoon.eot?7t5hxq#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?7t5hxq') format('truetype'),
+                url('fonts/icomoon.woff?7t5hxq') format('woff'),
+                url('fonts/icomoon.svg?7t5hxq#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        div {
+            position: relative;
+            width: 200px;
+            height: 35px;
+            border: 1px solid red;
+        }
+        div::after {
+            position: absolute;
+            font-family: 'icomoon';
+            content: "\e902";
+            top: 10px;
+            right:10px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

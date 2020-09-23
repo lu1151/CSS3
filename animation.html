@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes move {
+            0%{
+                transform: translate(0,0);
+            }
+            10% {
+                transform: translate(500px,0) scale(1.5);
+            }
+            50%{
+                transform: translate(500px,500px);
+            }
+            100%{
+                transform: translate(0,500px) scale(1.5);
+            }
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 100px 100px;
+            background-color: red;
+            animation: move 5s 1s forwards;
+        }
+
+        div:hover{
+            animation-play-state: paused;
+        }
+
+        section {
+            font-size: 20px;
+            width: 0px;
+            height: 30px;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: type 4s steps(10) forwards;
+        }
+
+        @keyframes type {
+            0%{width: 0;}
+            100%{width: 200px;}
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <section>如果吃饱了就不饿了</section>
+</body>
+</html>

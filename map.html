@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .map {
+            position: relative;
+            width: 1000px;
+            height: 500px;
+            background-image: url(/img/img.png);
+            background-size: 100%;
+        }
+
+        .city {
+            bottom: 30px;
+            left: 378px;
+            position: absolute;
+        }
+
+        .dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            bottom: -4px;
+            left: -4px;
+            border-radius: 50%;
+            background-color: blueviolet;
+        }
+
+        .city div[class^="circle"] {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 12px blueviolet;
+            border-radius: 50%;
+            animation: ripple 1.2s linear infinite;
+        }
+
+        .city div.circle2 {
+            animation-delay: 0.4s;
+        }
+
+        .city div.circle3 {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes ripple {
+            0% {}
+
+            50% {
+                width: 30px;
+                height: 30px;
+                opacity: 1;
+            }
+
+            100% {
+                width: 50px;
+                height: 50px;
+                opacity: 0;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map">
+        <div class="city">
+            <div class="dot"></div>
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

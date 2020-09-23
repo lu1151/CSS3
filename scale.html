@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            overflow: hidden;
+            height: 56px;
+            float: left;
+            margin: 10px;
+        }
+
+        div img {
+            transition: all 0.3S;
+        }
+
+        div img:hover {
+            transform: scale(1.1);
+        }
+
+        li {
+            float: left;
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            margin: 10px;
+            border: 1px solid blue;
+            border-radius: 50%;
+            list-style: none;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        li:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="#"><img src="img/mi.png" alt=""></a>
+    </div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</body>
+
+</html>

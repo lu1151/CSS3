@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* background-color: pink; */
+        }
+
+        .bg1 {
+            background: url(/img/bg1.png);
+            width: 3840px;
+            height: 336px;
+            animation: bg1move 20s linear infinite;
+        }
+
+        .bear {
+            position: absolute;
+            top: 230px;
+            width: 200px;
+            height: 100px;
+            background: url(/img/bear.png) no-repeat;
+            animation: bear .5s steps(8) infinite, bearmove 3s linear forwards;
+        }
+
+        @keyframes bear {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -1600px 0;
+            }
+        }
+
+        @keyframes bearmove {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 50%;
+                margin-left: -100px;
+            }
+        }
+
+        @keyframes bg1move {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                background-position: -3840px 0;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="bg1">
+
+
+    <div class="bear"></div>
+</div>
+</body>
+
+</html>

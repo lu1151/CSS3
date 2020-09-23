@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 500px;
+        }
+
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            transition: all 1s;
+            transform-style: preserve-3d;
+        }
+
+        .box:hover {
+            transform: rotateY(75deg);
+        }
+
+        .box div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+        }
+
+        .box div:last-child {
+            background-color: purple;
+            transform: rotateX(60deg);
+        }
+
+        section { 
+            position: relative;
+            width: 300px;height: 300px;
+            transform-style: preserve-3d;
+            margin: 100px auto;
+            transition: all 1s;
+        }
+ 
+ section:hover{
+     transform: rotateY(180deg);
+ }
+        .front,
+        .back { 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            font-size: 30px;
+            color: seashell;
+            text-align: center;
+line-height: 300px;
+        }
+        .front {
+            z-index: 1;
+            background-color: pink;
+        }
+        .back{
+            background-color: red;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+    </div>
+    <section>
+        <section class="front">Front</section>
+        <section class="back">Back</section>
+    </section>
+</body>
+
+</html>

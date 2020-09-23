@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {
+            width: 100px;
+            height: 100px;
+            margin: 100px 100px;
+            background-color: blue;
+            transition: all 0.5s;
+        }
+
+        .one:hover {
+            transform: translate(100px, 100px) rotate(180deg);
+        }
+
+        .two {
+            width: 100px;
+            height: 100px;
+            margin: 100px 100px;
+            background-color: red;
+            transition: all 0.5s;
+        }
+
+        .two:hover {
+            transform: rotate(180deg) translate(100px, 100px) scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+</body>
+
+</html>
